@@ -11,8 +11,8 @@ public class GraphGenerator {
     public static Graph generate(int vertices, int edges, Kind kind, long seed) {
         long max = (long) vertices * (vertices - 1);
         if (kind != Kind.CYCLIC) max /= 2;
-        int minimum = kind == Kind.DAG ? 0 : kind == Kind.CYCLIC ? vertices : vertices - 1;
-        if (vertices < 2 || edges < minimum || edges > max)
+        int minimum = kind == Kind.DAG ? 0 : kind == Kind.CYCLIC ? 3 : vertices - 1;
+        if (vertices < 2 || (kind == Kind.CYCLIC && vertices < 3) || edges < minimum || edges > max)
             throw new IllegalArgumentException("Impossible simple graph configuration");
         Random random = new Random(seed);
         Graph graph = new Graph(vertices, kind != Kind.UNDIRECTED);
@@ -23,8 +23,8 @@ public class GraphGenerator {
         } else if (kind == Kind.CYCLIC) {
             // A cycle in the first three vertices; the others may form separate SCCs.
             add(graph, used, 0, 1, random);
-            add(graph, used, 1, 2 % vertices, random);
-            add(graph, used, 2 % vertices, 0, random);
+            add(graph, used, 1, 2, random);
+            add(graph, used, 2, 0, random);
         }
         while (graph.edges().size() < edges) {
             int from = random.nextInt(vertices);

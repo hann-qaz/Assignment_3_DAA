@@ -113,6 +113,8 @@ public class AlgorithmTests {
         rejects(() -> TopologicalSort.run(ties, new Stats()));
         rejects(() -> Dijkstra.run(loop, 1, new Stats()));
         rejects(() -> GraphGenerator.generate(3, 4, GraphGenerator.Kind.DAG, 1));
+        rejects(() -> GraphGenerator.generate(2, 2, GraphGenerator.Kind.CYCLIC, 1));
+        check(TopologicalSort.run(GraphGenerator.generate(3, 3, GraphGenerator.Kind.CYCLIC, 1), new Stats()).hasCycle(), "Minimum three-edge cycle");
     }
 
     private static void verifyMst(Graph graph) {
