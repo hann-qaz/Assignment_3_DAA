@@ -11,6 +11,6 @@ This checklist maps the supplied rubric to deliverables; it is not a promised gr
 | Complexity analysis | 10 | README Complexity Analysis, implementation-specific heap and space bounds |
 | Experimental design and benchmarking | 10 | `src/benchmark/`, exact sizes, seed 42, 5 measured repetitions, nanoTime, counters |
 | Results, plots, discussion | 10 | README Results and Discussion, 105 raw runs, 21 summaries, two PNG plots, DSU comparison |
-| Testing and correctness | 5 | `tests/AlgorithmTests.java`, independent oracles and required edge cases |
+| Testing and correctness | 5 | `tests/tests/AlgorithmTests.java`, independent oracles and required edge cases |
 | README and GitHub quality | 5 | Complete report, task checklist, meaningful commits, CI workflow |
 | Total | 100 | All categories represented |
