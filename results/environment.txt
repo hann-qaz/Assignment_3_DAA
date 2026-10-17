@@ -1,0 +1,10 @@
+Measurement timestamp (UTC): 2026-10-17T13:26:13.233490Z
+Java: 25.0.2
+VM: Java HotSpot(TM) 64-Bit Server VM
+OS: Mac OS X 15.6
+Architecture: aarch64
+Available processors: 10
+Seed: 42
+Warmups per job and size: 30
+Measured repetitions: 5
+Timer: System.nanoTime()
