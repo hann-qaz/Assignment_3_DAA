@@ -94,6 +94,7 @@ public class Benchmark {
                 + "\nMeasured repetitions: " + REPEATS + "\nTimer: System.nanoTime()\n");
         PlotWriter.write(rows, true);
         PlotWriter.write(rows, false);
+        DsuExperiment.write();
         System.out.println(markdown);
         System.out.println("Saved 105 raw measurements, 21 summaries and two PNG plots in results/.");
     }

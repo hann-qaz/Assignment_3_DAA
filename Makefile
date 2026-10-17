@@ -8,5 +8,5 @@ test: build
 run: build
 	java -cp build app.Main
 benchmark: build
-	java -cp build benchmark.Benchmark
+	java -Djava.awt.headless=true -cp build benchmark.Benchmark
 all: test run benchmark
