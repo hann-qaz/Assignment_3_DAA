@@ -45,7 +45,6 @@ docs/             Russian algorithm walkthrough and grading checklist
 ```
 
 See [the Russian walkthrough](docs/ALGORITHMS_RU.md) for a step-by-step explanation
-and [TASKS.md](TASKS.md) for completed development tasks.
 
 ## Implementation
 
