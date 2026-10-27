@@ -44,7 +44,6 @@ results/plots/    Execution time vs. V and vs. E
 docs/             Russian algorithm walkthrough and grading checklist
 ```
 
-See [the Russian walkthrough](docs/ALGORITHMS_RU.md) for a step-by-step explanation
 
 ## Implementation
 
@@ -264,6 +263,3 @@ acyclic dependencies, and Dijkstra for non-negative single-source travel distanc
 The experiments show increasing work with graph size, linear edge scans for directed
 connectivity, and the practical benefit of DSU heuristics. Runtime winners depend
 on the implementation and input; the operation counts explain the measured trends.
-
-Assignment requirements and Lecture 6 are the supplied course references. See
-[the grading map](docs/GRADING.md) for the implementation corresponding to each criterion.
